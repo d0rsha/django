@@ -9,5 +9,5 @@ class Product(models.Model):
     summary = models.TextField()
     featured = models.NullBooleanField()
 
-    def get_absolute_urls(self):
-        return f"/product/{self.id}/"
+    def get_absolute_url(self):
+        return f"/products/{self.id}/"
