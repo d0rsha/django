@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block main_content %}
+<h1>Item</h1>
+<p>
+  {% if not object.descr and object.descr != '' %} 
+    {{ object.descr }} 
+  {% else %}
+    Descr1iption coming soon
+{% endif %}
+</p>
+
+<div>
+  <p>Title:  {{ object.title }}</p>
+  <p>Price:  {{ object.price }}</p>
+</div>
+
+{% endblock %}  

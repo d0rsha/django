@@ -1,0 +1,36 @@
+<!-- Template extends tag-->
+{% extends 'base.html' %}
+<!-- The block tag -->
+{% block main_content %}
+<h1>Look at me, I'm a Contacts tab</h1>
+{{ request.user }}
+<p>THis is a template file</p>
+
+<!-- Variables -->
+{{ my_text| title}} 
+{{ my_number }}
+{{ my_html| safe }}
+{{ my_html | striptags }}
+
+<!-- For loops  -->
+<p>Look at me, I'm a iterable list printed with a for-loop</p>
+{% for item in my_list %}
+<!-- Conditionals -->
+{% if item == 'abc' %}
+<div>
+  <p>First item</p>
+  <li>{{ item|capfirst|upper }}
+  {% comment %} <li>{{ item|add:22 }}</li> {% endcomment %}
+</div>
+
+{% else %}
+<li>{{ item|capfirst }}</li>
+
+{% endif %} 
+
+{% endfor %}
+
+<!-- Filters -->
+
+<!-- -->
+{% endblock %}

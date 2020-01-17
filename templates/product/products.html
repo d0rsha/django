@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<ul>
+{% for instance in object_list %}
+  <li><strong>{{instance.id }}</strong>: <a href='{{ instance.get_absoluteurl }}'> {{ instance.title }}</a> - {{ instance.price }}$ - {{ instance.descr }} </li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<form action='./delete' method='POST'> {% csrf_token %}
+  <h1>Do you wish to delete the product "{{ object.title }}"?</h1>
+  {% comment %} <input type='text' name='title' placeholder="You're title boi" />{% endcomment %}
+  <p><input type='submit' value='Yes' /> </p>
+   <a href=".">No</a>
+</form>
+
+{% endblock %} 
